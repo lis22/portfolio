@@ -1,0 +1,251 @@
+body {
+  /* Typography Declarations */
+  color: black;
+  font-size: 1em;
+  font-family: 'Open Sans Condensed', sans-serif;
+  -webkit-font-smoothing: antialiased;
+
+}
+
+/**********************CENTERED CONTAINER ************************************/
+.parent-container {
+  width: 56.25em;
+  height: auto;
+  /* makes .content inside the .top-navigation always centered
+  The first value ("0") is the top and bottom margin,
+  the second value ("auto") is the left and right margin.  */
+  margin: 0 auto;
+  padding: 0px 0.938em;
+}
+
+
+/*************************HEADER SECTION *********************************/
+
+header{
+  height: 10em;
+  margin-bottom: 2em;
+
+}
+
+.header-text
+{
+  display: block;
+  text-transform: uppercase;
+  float: left;
+  font-size: 1.3rem;
+  margin-top: 2em;
+  margin-bottom: 1em;
+
+}
+
+/* removes spacing between Lisa Marie and Web Developer */
+.header-name, .header-webdev
+{
+  margin: 0;
+  text-align: left;
+}
+
+.header-webdev {
+  color: #838994;
+}
+/*************************NAVIGATION IN HEADER ******************************/
+
+/** navigation right side links **/
+.top-navigation  .nav-links {
+  float: right;
+  font-size: 1.25rem;
+}
+.top-navigation .nav-links {
+  list-style-type: none;
+}
+
+.top-navigation .nav-links  li {
+  display: inline-block;
+  margin-left: 2em;
+  margin-top: 4.45em;
+
+}
+.top-navigation .nav-links li a {
+  color: #838994;
+  text-decoration: none;
+}
+
+/*changes color and cursor when hoving over nav links **/
+.top-navigation  .nav-links  a:hover {
+  color: black;
+  cursor: pointer;
+}
+
+
+
+/********************* IMAGES SECTION************************************/
+/****** ANIMATION FROM http://css3.bradshawenterprises.com/cfimg/ ******/
+.child-container
+{
+    position: relative;
+
+    margin: 0 auto;
+    width: 56.250em;
+    height: 37.5em;
+    margin-bottom: 0;
+}
+
+
+.child-container img {
+  left: 0;
+  position: absolute;
+  animation-name: cycleimages;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 10s;
+
+}
+
+
+@keyframes cycleimages {
+  0% {
+    opacity:1;
+  }
+  12% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  75% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+
+.child-container img:nth-of-type(1) {
+  animation-delay: 6s;
+
+}
+.child-container img:nth-of-type(2){
+  animation-delay: 4s;
+}
+
+.child-container img:nth-of-type(3) {
+  animation-delay: 2s;
+}
+
+.child-container img:nth-of-type(4) {
+  animation-delay: 0;
+}
+
+
+
+/********************* FOOTER SECTION*****************************************/
+.end-of-page h6
+{
+  padding-bottom: 3em;
+  font-size: .8em;
+  text-align: center;
+  clear: both;
+}
+
+
+/* grey line seperator */
+.end-of-page hr {
+  border: 1px solid #eaebec;
+  margin-top: 3em;
+  clear: both;
+
+}
+
+
+/************************** ABOUT ME *****************************************/
+.about-me h1
+{
+
+  font-family: "Gentium Book Basic", Georgia, serif;
+  font-weight: 100;
+  font-size: 2em;
+  letter-spacing: 1px;
+  text-align: center;
+
+}
+
+
+
+.about-me-text
+{
+  float: left;
+  display: block;
+  margin: 0 auto;
+  width:23.438em;
+  padding-bottom: 15em;
+  font-size: 1.1em;
+  font-family: "Gentium Book Basic", Georgia, serif;
+  font-weight: 50;
+
+
+}
+
+
+.about-me-pic
+{
+  float: right;
+  display: block;
+  margin: 0 auto;
+  width: 28.125em;
+  padding-top: 1em;
+}
+
+
+/************************** PORTFOLIO *****************************************/
+.portfolio  h1
+{ font-family: "Gentium Book Basic", Georgia, serif;
+  text-align: center;
+  font-weight: 100;
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+
+.portfolio h2
+{
+  font-family: "Gentium Book Basic", Georgia, serif;
+  font-weight: 300;
+
+}
+
+.firstproject
+{
+  width: 26.875em;
+  float: left;
+  padding-bottom: 2em;
+  font-family: "Gentium Book Basic", Georgia, serif;
+  font-weight: 50;
+}
+
+
+.secondproject
+{
+  width: 26.875em;
+  float: right;  padding-bottom: 2em;
+  padding-bottom: 2em;
+  font-family: "Gentium Book Basic", Georgia, serif;
+  font-weight: 50;
+
+}
+
+/************************** MOBILE *****************************************/
+/**********************NOT WORKING RIGHT **********************************/
+@media only screen and (max-width: 500px) {
+  .header-name, .header-webdev, .end-of-page h6, .portfolio  h1, .about-me {
+    font-size: 1em;
+  }
+  .top-navigation  .nav-links, .portfolio h2, .about-me-text, .end-of-page h6
+ {
+    font-size:.8em;
+    margin-left: 0;
+  }
+
+  .parent-container {
+    width: 30em;
+  }
+}
