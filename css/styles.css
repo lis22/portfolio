@@ -234,7 +234,7 @@ header{
 }
 
 /************************** MOBILE *****************************************/
-/**********************NOT WORKING RIGHT **********************************/
+/**********************NOT WORKING RIGHT **********************************
 @media only screen and (max-width: 500px) {
   .header-name, .header-webdev, .end-of-page h6, .portfolio  h1, .about-me {
     font-size: 1em;
@@ -249,3 +249,4 @@ header{
     width: 30em;
   }
 }
+*/
